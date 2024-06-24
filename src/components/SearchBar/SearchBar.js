@@ -5,7 +5,6 @@ import {
   Box,
   Typography,
   TextField,
-  IconButton,
 } from "@mui/material";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import { DateRangePicker } from "react-date-range";
