@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 200px) {
   .mobile-search-bar {
     display: block;
   }

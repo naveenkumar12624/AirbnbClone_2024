@@ -14,6 +14,7 @@ function Card({ card }) {
         slidesPerView={1}
         spaceBetween={15}
         loop={true}
+        autoplay={{ delay: 1000 }} // Slide every 1 second
         mousewheel={true}
         cssMode={true}
         pagination={{ clickable: true }}
@@ -59,4 +60,3 @@ function Card({ card }) {
 }
 
 export default Card;
-

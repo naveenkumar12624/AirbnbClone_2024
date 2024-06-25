@@ -215,7 +215,9 @@ const Login = ({ onLoginSuccess }) => {
           onChange={(e) => setCountryCode(e.target.value)}
         >
           <MenuItem value="91">India (+91)</MenuItem>
-          {/* Add more country codes as needed */}
+          <MenuItem value="1">United States (+1)</MenuItem>
+          <MenuItem value="44">United Kingdom (+44)</MenuItem>      
+
         </Select>
       </FormControl>
       <TextField

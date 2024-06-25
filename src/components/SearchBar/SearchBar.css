@@ -1,4 +1,4 @@
-
+/* 
 .search-bar {
   display: flex;
   justify-content: space-between;
@@ -127,4 +127,190 @@
   width: 30%; 
   gap: 0rem; 
 }
+ */
 
+
+ .search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0rem;
+  padding: 0.2rem;
+  border: 1px solid var(--grey);
+  border-radius: 3rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  width: 70%;
+  cursor: pointer;
+}
+
+.search-bar-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar-line:hover {
+  background-color: var(--light-grey);
+  border-radius: 2rem;
+}
+
+.search-bar-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0); 
+}
+
+.search-bar-text2 {
+  font-size: 0.85rem;
+  font-weight: 200;
+  color: var(--font-grey); 
+  text-align: left;
+}
+
+.search-icon-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--theme);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.region-dropdown {
+  position: absolute;
+  top: 140px; 
+  left: 60px;
+  background-color: white;
+  border: 1px solid var(--grey);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  border-radius: 0.5rem;
+  display: none;
+  z-index: 1000;
+}
+
+.region-dropdown.active {
+  display: block;
+}
+
+.region-item {
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+}
+
+.region-item:hover {
+  background-color: var(--light-grey);
+}
+
+.guest-modal {
+  position: fixed;
+  top: 160px; 
+  left: 50rem;
+  background-color: white;
+  border: 1px solid var(--grey);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.guest-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.guest-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.guest-buttons button {
+  margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .search-bar {
+    width: 70%; /* Adjust width for medium screens */
+  }
+  .search-bar-text, .search-bar-text2 {
+    font-size: 0.8rem; /* Adjust font size for medium screens */
+  }
+  .search-icon-div {
+    padding: 0.4rem; /* Adjust padding for medium screens */
+  }
+  .guest-modal {
+    left: 40rem; /* Adjust left position for medium screens */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .search-bar {
+    width: 80%; /* Adjust width for smaller screens */
+    padding: 0.6rem; /* Adjust padding for smaller screens */
+  }
+  .search-bar-text, .search-bar-text2 {
+    font-size: 0.75rem; /* Adjust font size for smaller screens */
+  }
+  .search-icon-div {
+    padding: 0.3rem; /* Adjust padding for smaller screens */
+  }
+  .guest-modal {
+    left: 30rem; /* Adjust left position for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .search-bar {
+    width: 90%; /* Adjust width for mobile screens */
+    padding: 0.5rem; /* Adjust padding for mobile screens */
+  }
+  .search-bar-text, .search-bar-text2 {
+    font-size: 0.7rem; /* Adjust font size for mobile screens */
+  }
+  .search-icon-div {
+    padding: 0.2rem; /* Adjust padding for mobile screens */
+  }
+  .guest-modal {
+    left: 20rem; /* Adjust left position for mobile screens */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .search-bar {
+    width: 100%; /* Adjust width for extra small screens */
+    padding: 0.4rem; /* Adjust padding for extra small screens */
+  }
+  .search-bar-text, .search-bar-text2 {
+    font-size: 0.65rem; /* Adjust font size for extra small screens */
+  }
+  .search-icon-div {
+    padding: 0.1rem; /* Adjust padding for extra small screens */
+  }
+  .guest-modal {
+    left: 10rem; /* Adjust left position for extra small screens */
+  }
+}
+
+.search-bar-text.scrolled {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--font-black);
+  justify-content: space-between;
+}
+
+.search-bar-text2.scrolled {
+  display: none; 
+}
+
+.search-bar.scrolled {
+  width: 30%; 
+  gap: 0rem; 
+}

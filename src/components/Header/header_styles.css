@@ -38,12 +38,12 @@
   align-items: center;
 }
 
+/* Adjusted column2 styles */
 .column2 {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem; /* Reduce the gap to create more space */
   padding-left: 8rem;
-
 }
 
 .stays-experiences {
@@ -67,15 +67,15 @@
   align-items: center;
 }
 
+/* Updated Profile Menu styles */
 .profile-container {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem; /* Adjust gap between items */
 }
 
 .airbnb-your-home {
-  padding: 1rem;
+  padding: 0.8rem 1.5rem; /* Adjust padding for better touch area */
   font-weight: 600;
   border-radius: 2rem;
   cursor: pointer;
@@ -88,19 +88,12 @@
 
 .profile-menu-flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.25rem;
+  align-items: right;
+  gap: 0.5rem; /* Adjust gap between items */
   color: var(--font-grey);
   border: 1px solid var(--grey);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 2rem;
-}
-
-.menu-items {
-  padding: 0.5rem 1rem !important;
-  font-size: 0.8rem;
-  color: var(--font-grey);
 }
 
 .bottom-nav {
@@ -138,7 +131,6 @@
   cursor: pointer;
   transition: background-color 0.3s;
   /* border-radius: 5rem; */
-  
 }
 
 .search-bar-line:hover {
