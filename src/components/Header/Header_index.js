@@ -1,20 +1,20 @@
+// src/components/Header/Header_index.js
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/long-logo.png";
 import "./header_styles.css";
 import LanguageIcon from "@mui/icons-material/Language";
-import ProfileMenu from "./ProfileMenu"; 
+import ProfileMenu from "./ProfileMenu";
 import MobileSearchBar from "../MobileSearchBar/MobileSearchBar_index";
 import SimpleBottomNavigation from "../BottomNavigation/BottomNavigation";
-import SearchBar from "../SearchBar/SearchBar"; // Import the new SearchBar component
+import SearchBar from "../SearchBar/SearchBar";
 
-function Header({ toggleSearch, onDateChange }) {
+function Header({ toggleSearch, loggedInUser }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setIsScrolled(scrollTop > 0);
+      setIsScrolled(window.pageYOffset > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,38 +27,23 @@ function Header({ toggleSearch, onDateChange }) {
     <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="first-row">
         <div className="column1">
-        <Link to="/" className="logo-link">
+          <Link to="/" className="logo-link">
             <img src={logo} alt="logo" className="navbar-logo" />
           </Link>
         </div>
-        {!isScrolled && (
-          <div className="column2">
-            <div className="stays-experiences">
-              <div className="tab active"></div>
-              <div className="tab"></div>
-            </div>
-          </div>
-        )}
         <div className="column3">
           <div className="profile-container">
             <div className="airbnb-your-home">Airbnb your home</div>
-            <div className="airbnb-your-home">
-              <LanguageIcon sx={{ fontSize: "1.3rem" }} />
-            </div>
+            <LanguageIcon sx={{ fontSize: "1.3rem" }} />
             <div className="profile">
-              <ProfileMenu />
+              {loggedInUser ? <span>Welcome, {loggedInUser}!</span> : <ProfileMenu />}
             </div>
           </div>
         </div>
       </div>
       <div className="second-row">
-        <SearchBar
-          isScrolled={isScrolled}
-          toggleSearch={toggleSearch}
-          onDateChange={onDateChange}
-        />
+        <SearchBar isScrolled={isScrolled} toggleSearch={toggleSearch} />
       </div>
-      {/* Remove the rendering of ProfileMenu from here */}
       <MobileSearchBar />
       <SimpleBottomNavigation />
     </div>

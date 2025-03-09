@@ -67,15 +67,31 @@
   align-items: center;
 }
 
-/* Updated Profile Menu styles */
+/* ✅ Updated Profile Menu styles (Fix Duplicate Menu Icon) */
 .profile-container {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Adjust gap between items */
+  gap: 1rem; /* Adjust spacing */
+}
+
+/* ✅ Make sure only ONE menu icon is displayed */
+.profile-menu-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--font-grey);
+  border: 1px solid var(--grey);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+/* ✅ Hide extra menu icon if duplicate exists */
+.profile-container .profile-menu-flex:nth-child(2) {
+  display: none;
 }
 
 .airbnb-your-home {
-  padding: 0.8rem 1.5rem; /* Adjust padding for better touch area */
+  padding: 0.8rem 1.5rem;
   font-weight: 600;
   border-radius: 2rem;
   cursor: pointer;
@@ -84,16 +100,6 @@
 
 .airbnb-your-home:hover {
   background-color: var(--light-grey);
-}
-
-.profile-menu-flex {
-  display: flex;
-  align-items: right;
-  gap: 0.5rem; /* Adjust gap between items */
-  color: var(--font-grey);
-  border: 1px solid var(--grey);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
 }
 
 .bottom-nav {
@@ -130,7 +136,6 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  /* border-radius: 5rem; */
 }
 
 .search-bar-line:hover {
@@ -141,13 +146,13 @@
 .search-bar-text {
   font-size: 0.85rem;
   font-weight: 600;
-  color: black; /* Default color for main text */
+  color: black;
 }
 
 .search-bar-text2 {
   font-size: 0.85rem;
   font-weight: 200;
-  color: var(--font-grey); /* Default color for secondary text */
+  color: var(--font-grey);
   text-align: left;
 }
 
@@ -192,7 +197,7 @@
 
 /* Additional styles for scrolled state */
 .navbar.scrolled {
-  padding: 0.1rem ; 
+  padding: 0.1rem;
   text-align: left;
 }
 
@@ -200,15 +205,13 @@
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--font-black);
-  /* padding-right: 0.1rem; */
-  justify-content: space-evenly;
 }
 
 .navbar.scrolled .search-bar-text2 {
-  display: none; /* Hide secondary text when scrolled */
+  display: none;
 }
 
 .navbar.scrolled .search-bar {
-  width: 30%; /* Adjust the width when scrolled */
-  gap: 0rem; /* Adjust the gap when scrolled */
+  width: 30%;
+  gap: 0rem;
 }
